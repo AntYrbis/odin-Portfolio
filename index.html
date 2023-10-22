@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Public/style.css">
+    <script src="./Public/index.js" async></script>
+    <link rel="shortcut icon" href="./Public/Images/antyrbis/antyrbis_blue.svg" type="image/x-icon">
+    <title>Page 1</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="container">
+                <nav>
+                    <img id="img-header" src="./Public/Images/antyrbis/antyrbis_blue.svg" alt="antyrbis logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--About Me-->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Public/Images/" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p>Some text here !</p>
+                        <div class="tab-titles">
+                            <div class="tab-links active" onclick="opentab('skills')">Skills</div>
+                            <div class="tab-links"onclick="opentab('experience')">Experience</div>
+                            <div class="tab-links"onclick="opentab('education')">Education</div>
+                        </div>
+                        <div class="tab-contents active" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web App Interfaces</span></li>
+                                <li><span>Front End</span><br>Designing Web App Interfaces</span></li>
+                                <li><span>Back End</span><br>Designing Web App Interfaces</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2020-2021</span><br>Job Description</span></li>
+                                <li><span>2020-2021</span><br>Job Description</span></li>
+                                <li><span>2020-2021</span><br>Job Description</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020</span><br>Diploma</span></li>
+                                <li><span>2020</span><br>Diploma</span></li>
+                                <li><span>2020</span><br>School</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Projects-->
+        <div id="projects">
+            <div class="container">
+                <h1 class="subtitle">Projects</h1>
+            </div>
+        </div>
+        <!--Services-->
+        <div id="services">
+            <div class="container">
+                <h1 class="subtitle">Sevices</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Description du services</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code-branch"></i>
+                    <h2>Web Design</h2>
+                    <p>Description du services</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen"></i>
+                    <h2>Web Design</h2>
+                    <p>Description du services</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!--Contact-->
+        <div id="contact">
+            <div class="container">
+                <h1 class="subtitle">Contact</h1>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://kit.fontawesome.com/db5f104521.js" crossorigin="anonymous"></script>
+</body>
+</html>
