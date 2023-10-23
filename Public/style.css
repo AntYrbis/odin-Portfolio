@@ -44,8 +44,15 @@
     color: grey;
 }
 
+html{
+    scroll-padding-top: 75px; 
+}
+
 body {
-    overflow: none;
+    overflow-x: none;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-snap-stop: always;
     background-color: black;
 }
 
@@ -123,15 +130,13 @@ input:checked+#slider:before{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100dvh minmax(0, 1fr) minmax(0, 100dvh) minmax(0,80dvh);
+    grid-template-rows:  minmax(0, 90dvh) minmax(0, 100dvh) minmax(0, 90dvh) minmax(0,80dvh);
     overflow-x: none;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-snap-stop: always;
+    overflow-y: visible;
 }
 
 .containers{
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 .container{
     padding: 15px 10%;
@@ -151,6 +156,10 @@ input:checked+#slider:before{
 header{
     width: 100%;
     background-color: var(--main-blue);  
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 nav{
@@ -167,7 +176,7 @@ nav{
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px 10px;
 }
 
 nav ul li a{
@@ -178,24 +187,29 @@ nav ul li a{
 
 /* ABOUT ME */
 #about{
-    padding: 40px 0;
+    padding: 50px;
     color: #ababab;
+    height: 90dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .row{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 .about-col-1 img{
-    height: 450px;
+    height: 550px;
     border-radius: 15px;
     box-shadow: -4px 5px 5px var(--main-blue);
 }
 
 .about-col-2{
-    flex-basis: 55%;
+    padding: 20px;
 }
 
 .tab-titles{
@@ -247,13 +261,16 @@ nav ul li a{
 
 /* PROJECTS */
 #projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .projects-list{
     display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
     grid-template-rows: auto-fit;
-    grid-gap: 40px;
+    grid-gap: 30px;
     margin-top: 50px;
 }
 
@@ -314,7 +331,6 @@ nav ul li a{
     padding: 30px 0;
     background-color: var(--grey);
     justify-content: center;
-
 }
 
 .services-list{
@@ -360,12 +376,19 @@ nav ul li a{
 
 /* CONTACT */
 #contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #contact-container{
     background-color: var(--second-blue);
     padding: 20px;
     border-radius: 25px;
+}
+
+.contact-col-1{
+    padding: 15px;
 }
 
 .contact-col-1 i{
@@ -388,8 +411,17 @@ footer{
 
 /* RESPONSIVE DESIGN */
 @media only screen and (max-width: 750px) and (orientation: portrait) { /* mobiles */
+    html{
+        scroll-padding-top: 35px; 
+    }
+
     body {
         font-size: 1rem;
+        overflow-y: visible;
+    }
+
+    .main-content{
+        grid-template-rows:  100dvh minmax(0, 1fr) minmax(0, 100dvh) minmax(0, 80dvh);
     }
 
     #container-nav{
@@ -430,7 +462,7 @@ footer{
     }
 
     .tab-links {
-        margin-right: 40px;
+        margin-right: 20px;
         font-size: 1.2rem;
     }
 
@@ -447,11 +479,28 @@ footer{
     .contact-col-2 img{
         height: 200px;
     }
+
+    .about-col-2{
+        padding: 10px;
+    }
 }
 
 @media only screen and (min-width: 751px) and (max-width: 1200px) { /*les tablette*/
+    html{
+        scroll-padding-top: 70px; 
+    }
+
     body {
         font-size: 1rem;
+        overflow-y: visible;
+    }
+
+    .main-content{
+        grid-template-rows:  100dvh minmax(0, 1fr) minmax(0, 90dvh) minmax(0, 80dvh);
+    }
+
+    .container{
+        overflow: visible;
     }
 
     #container-nav{
@@ -485,12 +534,12 @@ footer{
     }
 
     .tab-links {
-        margin-right: 50px;
+        margin-right: 30px;
         font-size: 1.5rem;
     }
 
     .about-col-2{
-        flex-basis: 25%;
+        padding: 15px;
     }
 
     .services-list div i{
