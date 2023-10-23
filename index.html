@@ -11,7 +11,7 @@
 <body>
     <main>
         <header>
-            <div class="container">
+            <div id="container-nav">
                 <nav>
                     <img id="img-header" src="./Public/Images/antyrbis/antyrbis_blue.svg" alt="antyrbis logo">
                     <ul>
@@ -24,86 +24,180 @@
                 </nav>
             </div>
         </header>
-        <!--About Me-->
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="Public/Images/" alt="">
+        <div class="main-content">
+            <!--About Me-->
+            <div id="about" class="containers">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="Public/Images/me_square.jpg" alt="">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="subtitle">About Me</h1>
+                            <p>Some text here !</p>
+                            <div class="tab-titles">
+                                <div class="tab-links active" onclick="opentab('skills')">Skills</div>
+                                <div class="tab-links"onclick="opentab('experience')">Experience</div>
+                                <div class="tab-links"onclick="opentab('education')">Education</div>
+                            </div>
+                            <div class="tab-contents active" id="skills">
+                                <ul>
+                                    <li><span>UI/UX</span><br>Designing Web App Interfaces</span></li>
+                                    <li><span>Front End</span><br>Designing Web App Interfaces</span></li>
+                                    <li><span>Back End</span><br>Designing Web App Interfaces</span></li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2020-2021</span><br>Job Description</span></li>
+                                    <li><span>2020-2021</span><br>Job Description</span></li>
+                                    <li><span>2020-2021</span><br>Job Description</span></li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2020</span><br>Diploma</span></li>
+                                    <li><span>2020</span><br>Diploma</span></li>
+                                    <li><span>2020</span><br>School</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="about-col-2">
-                        <h1 class="subtitle">About Me</h1>
-                        <p>Some text here !</p>
-                        <div class="tab-titles">
-                            <div class="tab-links active" onclick="opentab('skills')">Skills</div>
-                            <div class="tab-links"onclick="opentab('experience')">Experience</div>
-                            <div class="tab-links"onclick="opentab('education')">Education</div>
+                </div>
+            </div>
+            <!--Projects-->
+            <div id="projects" class="containers">
+                <div class="container">
+                    <h1 class="subtitle">Projects</h1>
+                    <div class="projects-list">
+                        <div class="project">
+                            <img src="/Public/Images/me_width.jpg" alt="">
+                            <div class="project-title">
+                                <h3>Project name</h3>
+                                <div>
+                                    <a href=""><i class="fa-brands fa-github"></i></a>
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                            <p>Description des projets</p>
+                            <p class="tags">Tags</p>
                         </div>
-                        <div class="tab-contents active" id="skills">
-                            <ul>
-                                <li><span>UI/UX</span><br>Designing Web App Interfaces</span></li>
-                                <li><span>Front End</span><br>Designing Web App Interfaces</span></li>
-                                <li><span>Back End</span><br>Designing Web App Interfaces</span></li>
-                            </ul>
+                        <div class="project">
+                            <img src="/Public/Images/me_width.jpg" alt="">
+                            <div class="project-title">
+                                <h3>Project name</h3>
+                                <div>
+                                    <a href=""><i class="fa-brands fa-github"></i></a>
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                            <p>Description des projets</p>
+                            <p class="tags">Tags</p>
                         </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>2020-2021</span><br>Job Description</span></li>
-                                <li><span>2020-2021</span><br>Job Description</span></li>
-                                <li><span>2020-2021</span><br>Job Description</span></li>
-                            </ul>
+                        <div class="project">
+                            <img src="/Public/Images/me_width.jpg" alt="">
+                            <div class="project-title">
+                                <h3>Project name</h3>
+                                <div>
+                                    <a href=""><i class="fa-brands fa-github"></i></a>
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                            <p>Description des projets</p>
+                            <p class="tags">Tags</p>
                         </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2020</span><br>Diploma</span></li>
-                                <li><span>2020</span><br>Diploma</span></li>
-                                <li><span>2020</span><br>School</span></li>
-                            </ul>
+                        <div class="project">
+                            <img src="/Public/Images/me_width.jpg" alt="">
+                            <div class="project-title">
+                                <h3>Project name</h3>
+                                <div>
+                                    <a href=""><i class="fa-brands fa-github"></i></a>
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                            <p>Description des projets</p>
+                            <p class="tags">Tags</p>
+                        </div>
+                        <div class="project">
+                            <img src="/Public/Images/me_width.jpg" alt="">
+                            <div class="project-title">
+                                <h3>Project name</h3>
+                                <div>
+                                    <a href=""><i class="fa-brands fa-github"></i></a>
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                            <p>Description des projets</p>
+                            <p class="tags">Tags</p>
+                        </div>
+                        <div class="project">
+                            <img src="/Public/Images/me_width.jpg" alt="">
+                            <div class="project-title">
+                                <h3>Project name</h3>
+                                <div>
+                                    <a href=""><i class="fa-brands fa-github"></i></a>
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                            </div>
+                            <p>Description des projets</p>
+                            <p class="tags">Tags</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--Projects-->
-        <div id="projects">
-            <div class="container">
-                <h1 class="subtitle">Projects</h1>
-            </div>
-        </div>
-        <!--Services-->
-        <div id="services">
-            <div class="container">
-                <h1 class="subtitle">Sevices</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Description du services</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-code-branch"></i>
-                    <h2>Web Design</h2>
-                    <p>Description du services</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-pen"></i>
-                    <h2>Web Design</h2>
-                    <p>Description du services</p>
-                    <a href="#">Learn More</a>
+            <!--Services-->
+            <div id="services" class="containers">
+                <div class="container">
+                    <h1 class="subtitle">Sevices</h1>
+                    <div class="services-list">
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Web Design</h2>
+                            <p>Description du services</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-code-branch"></i>
+                            <h2>Web Design</h2>
+                            <p>Description du services</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-pen"></i>
+                            <h2>Web Design</h2>
+                            <p>Description du services</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
-        </div>
-        <!--Contact-->
-        <div id="contact">
-            <div class="container">
-                <h1 class="subtitle">Contact</h1>
+            <!--Contact-->
+            <div id="contact" class="containers">
+                <div class="container">
+                    <div class="row" id="contact-container">
+                        <div class="contact-col-1">
+                            <h1 class="subtitle">Contact</h1>
+                            <p>Some text here !</p><br>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>Contact phone</p><br>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>Contact mail</p><br>
+                            <i class="fa-solid fa-envelopes-bulk"></i>
+                            <p>Contact adress</p><br>
+                        </div>
+                        <div class="contact-col-2">
+                            <img src="Public/Images/me_width.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="container">
+            credits and links
+        </div>
+    </footer>
     <script src="https://kit.fontawesome.com/db5f104521.js" crossorigin="anonymous"></script>
 </body>
 </html>

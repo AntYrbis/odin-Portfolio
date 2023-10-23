@@ -5,7 +5,10 @@
 /* GENERAL */
 /* Variable declaration on root for themes */
 :root {
-    --main-blue: rgb(64, 123, 255);
+    --main-blue: rgb(29, 99, 251);
+    --second-blue: rgb(34, 86, 197);
+    --grey: #262626;
+
     --error: rgb(231, 80, 80);
     --grey-light : rgba(168, 187, 193, 0.3);
     --grey-medium : rgba(157, 160, 162, 0.6);
@@ -17,8 +20,6 @@
     --secondary: rgb(202, 188, 100);
     --light: rgb(225, 217, 166);
 
-    --grey :rgb(203, 204, 207);
-
     --main-txt: rgb(3, 12, 140);
     --secondary-txt: rgb(3, 12, 140);
     --light-txt: rgb(3, 12, 140);
@@ -28,8 +29,6 @@
     --main: rgb(37, 54, 87);
     --secondary: rgb(48, 67, 105);
     --light: rgb(55, 76, 120);
-
-    --grey :rgb(207, 205, 191);
 
     --main-txt: rgb(33, 179, 159);
     --secondary-txt: rgb(33, 179, 159);
@@ -46,7 +45,7 @@
 }
 
 body {
-    overflow: scroll;
+    overflow: none;
     background-color: black;
 }
 
@@ -120,19 +119,38 @@ input:checked+#slider:before{
 }
 
 /* COMMUN */
+.main-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100dvh minmax(0, 1fr) minmax(0, 100dvh) minmax(0,80dvh);
+    overflow-x: none;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-snap-stop: always;
+}
+
+.containers{
+    scroll-snap-align: start;
+}
 .container{
     padding: 15px 10%;
 }
 
+#container-nav{
+    padding: 15px 10%;
+}
+
 .subtitle{
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bolder;
     color: white;
 }
 
 /* HEADER */
 header{
-    width: 100%;   
+    width: 100%;
+    background-color: var(--main-blue);  
 }
 
 nav{
@@ -160,7 +178,7 @@ nav ul li a{
 
 /* ABOUT ME */
 #about{
-    padding: 80px 10%;
+    padding: 40px 0;
     color: #ababab;
 }
 
@@ -171,12 +189,13 @@ nav ul li a{
 }
 
 .about-col-1 img{
-    width: 100%;
+    height: 450px;
     border-radius: 15px;
+    box-shadow: -4px 5px 5px var(--main-blue);
 }
 
 .about-col-2{
-    flex-basis: 60%;
+    flex-basis: 55%;
 }
 
 .tab-titles{
@@ -194,13 +213,14 @@ nav ul li a{
 
 .tab-links::after{
     content: '';
-    height: 3px;
+    height: 4px;
     width: 0;
-    background-color: #ff004f;
+    background-color: var(--main-blue);
     position: absolute;
     left: 0px;
     bottom: -8px;
     transition: 0.5s;
+    border-radius: 25px;
 }
 
 .tab-links.active::after{
@@ -213,7 +233,7 @@ nav ul li a{
 }
 
 .tab-contents ul li span{
-    color:  #c0325f;
+    color:  var(--second-blue);
     font-size: 1.1rem;
 }
 
@@ -225,9 +245,76 @@ nav ul li a{
     display: block;
 }
 
+/* PROJECTS */
+#projects{
+}
+
+.projects-list{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-rows: auto-fit;
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.projects-list img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: -4px 5px 5px var(--grey);
+}
+
+.project{
+    background-color: var(--second-blue);
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 15px;
+}
+
+.project-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.project-title i{
+    padding-left: 10px;
+}
+
+.project h3{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.project p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tags{
+    text-decoration: none;
+    color: white;
+    background-color: var(--grey);
+    padding: 0.5rem;
+    border-radius: 25px;
+    font-size: smaller;
+    display: inline-block;
+
+}
+
+.tags:hover{
+    background-color: black;
+    transform: translateY(-5px);
+}
+
 /* Services */
 #services{
     padding: 30px 0;
+    background-color: var(--grey);
+    justify-content: center;
+
 }
 
 .services-list{
@@ -238,7 +325,7 @@ nav ul li a{
 }
 
 .services-list div{
-    background-color: #262626;
+    background-color:  black;
     padding: 20px;
     font-size: 1rem;
     font-weight: 400;
@@ -251,6 +338,7 @@ nav ul li a{
 }
 
 .services-list div h2{
+    color: white;
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 15px;
@@ -266,25 +354,160 @@ nav ul li a{
 }
 
 .services-list div:hover{
-    background-color: #c0325f;
+    background-color: var(--main-blue);
     transform: translateY(-10px);
 }
 
+/* CONTACT */
+#contact{
+}
 
+#contact-container{
+    background-color: var(--second-blue);
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.contact-col-1 i{
+    font-size: 20px;
+    color: white;
+    padding: 7px;
+}
+
+.contact-col-2 img{
+    height: 550px;
+    border-radius: 25px;
+    box-shadow: -4px 5px 5px var(--grey);
+}
+
+/* FOOTER */
+footer{
+    background-color: var(--grey);
+    height: 50px;
+}
 
 /* RESPONSIVE DESIGN */
 @media only screen and (max-width: 750px) and (orientation: portrait) { /* mobiles */
     body {
-        width: 100%;
-        overflow: visible;
-        font-size: 0.5rem;
+        font-size: 1rem;
+    }
+
+    #container-nav{
+        padding: 10px 5%;
+    }
+
+    .subtitle{
+        font-size: 2rem;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #img-header{
+        height: 2.2rem;
+    }
+
+    nav ul li{
+        margin: 5px 5px;
+    }
+
+    nav ul li a{
+        font-size: 1rem;
+    }
+
+    .projects-list{
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+    }
+
+    .about-col-1 img{
+        height: 300px;
+    }
+
+    .tab-links {
+        margin-right: 40px;
+        font-size: 1.2rem;
+    }
+
+    .services-list div i{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .contact-col-1 i{
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .contact-col-2 img{
+        height: 200px;
     }
 }
 
-@media only screen and (min-width: 751px) and (max-width: 1024px) { /*les tablette*/
+@media only screen and (min-width: 751px) and (max-width: 1200px) { /*les tablette*/
     body {
-        width: 100%;
-        overflow: hidden;
-        font-size: 0.7rem;
+        font-size: 1rem;
+    }
+
+    #container-nav{
+        padding: 10px 10%;
+    }
+
+    .subtitle{
+        font-size: 2.5rem;
+    }
+
+    #img-header{
+        height: 3rem;
+    }
+
+    nav ul li{
+        margin: 7px 12px;
+    }
+
+    nav ul li a{
+        font-size: 1.2rem;
+    }
+
+    .projects-list{
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+    }
+
+    .about-col-1 img{
+        height: 350px;
+    }
+
+    .tab-links {
+        margin-right: 50px;
+        font-size: 1.5rem;
+    }
+
+    .about-col-2{
+        flex-basis: 25%;
+    }
+
+    .services-list div i{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .contact-col-1 i{
+        font-size: 20px;
+        padding: 7px;
+    }
+
+    .contact-col-2 img{
+        height: 450px;
+    }
+
+    .contact-col-2 img{
+        height: 350px;
     }
 }
