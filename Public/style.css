@@ -466,6 +466,10 @@ footer{
         font-size: 1.2rem;
     }
 
+    .services-list div{
+        padding: 10px;
+    }
+
     .services-list div i{
         font-size: 25px;
         margin-bottom: 20px;
@@ -542,6 +546,10 @@ footer{
         padding: 15px;
     }
 
+    .services-list div{
+        padding: 15px;
+    }
+
     .services-list div i{
         font-size: 30px;
         margin-bottom: 20px;
@@ -553,7 +561,7 @@ footer{
     }
 
     .contact-col-2 img{
-        height: 450px;
+        height: 400px;
     }
 
     .contact-col-2 img{
